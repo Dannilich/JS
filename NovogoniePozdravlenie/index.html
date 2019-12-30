@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"> <!-- подключение кодировки -->
+    <link rel="stylesheet" href="style.css"> <!-- подключение файла стилей -->
+    
+    <title>Поздравление</title> <!-- Заголовок страницы -->
+</head>
+<body>
+    <div id="introduce"> <!-- окно представления программы -->
+        <h1>Викторина:</h1> <!-- главный заголовок -->
+        <h2>Создай своё<br><span class="novigod-text">новогоднее настроение!</span></h2> <!-- подзаголовок с особенным шрифтом -->
+    </div>
+    <div id="main-action"> <!-- блок основного действия -->
+        <div id="quastions-block"><!-- блок отвественный за вопросы  -->
+            <div id="quastion-title" class="quastion">Вопрос №</div> <!-- блок с номером вопроса -->
+            <div id="quastion-text"  class="quastion">бла бла бла бла</div> <!-- блок с вопросом -->
+           
+            <div id="quastion-answers" class="quastion"> <!-- блок с выбором ответа -->
+                
+                <!-- "радио" выбор, обёрнутый в label-ы для подписи с отступом после каждого -->
+                <label><input type="radio" name="answer-select" value="1"  id="1q">Ответ 1</label> 
+                <br>
+                <label><input type="radio" name="answer-select" value="2"  id="2q">Ответ 2</label>
+                <br>
+                <label><input type="radio" name="answer-select" value="3"  id="3q">Ответ 3</label>
+                <br><br>
+
+                <button id="next">Ответить</button><!-- кнопка для ответа -->
+            </div>
+            
+        </div>
+        <div id="zal"><!-- Блок зала в котором будут располагаться все отгадываемые предметы -->
+            <img src="pics/room.png" id="main-zal"> <!-- картинка зала, далее за ним предметы зала -->
+            <img src="pics/christmas_tree_PNG137.png" id="yolka" class="items" hidden>
+            <img src="pics/27087217.png" id="stol" class="items" hidden>
+            <img src="pics/good-clipart-boy-12.png" id="friends" class="items" hidden>
+            <img src="pics/gifts.png" id="gifts" class="items" hidden>
+            <img src="pics/girliandi.gif" id="girliandi" class="items" hidden>
+            <div id="snow-window"></div><!-- блок снегопада -->
+        </div>
+        
+        <div id="sound-bar" hidden><!-- Блок с аудиоплэером -->
+            <p>Let it snow</p><!-- название песни -->
+            <audio controls 
+            src="sound/muzlome_Frank_Sinatra_-_Let_It_Snow_Let_It_Snow_Let_It_Snow_47944041.wav">
+            </audio><!-- плэер -->
+        </div>
+    </div>
+<script src= "https://code.jquery.com/jquery-3.4.1.js"></script> <!-- подключение через веб JQuеry -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- подключение плавных сообщений (swal()) -->
+<script src="script.js"></script> <!-- подключение основного скриптового файла -->
+
+</body>
+</html>

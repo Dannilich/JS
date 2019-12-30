@@ -1,0 +1,185 @@
+*{margin: 0; padding: 0; font-family: "snow-text";} 
+/* задание общих сфойств: отсутпы = 0 и снежный шрифт для всего текста */
+
+@font-face{ /* подлючение шрифта новогодних носков */
+    font-family: "novogonie-noski";
+    src: url(fonts/17964.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{ /* подключение снежного шрифта  */
+    font-family: "snow-text";
+    src: url(fonts/38.otf);
+    font-style: normal;
+    font-weight: bold;
+}
+/*************************************/
+#introduce{ /* окно представления викторины */
+    /* расположение во весь экран */
+    position: absolute; 
+    height: 100%;
+    width : 100%;
+
+    /* расположение картинки на нём */
+    background-image: url(pics/Christmas-Gift-Boxes-Decorations-1920x1200.jpg);
+    background-size: contain;
+    text-align: center;
+
+    /* выравнивание и позиционирование как главного элемента */
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+#introduce h1{ /* оформление заголовка */
+    margin-top: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#introduce h2 { /* оформление подзаголовка */
+ margin-top: 10%;
+ background-color: rgba(255, 255, 255, 0.8);
+
+}
+.novigod-text{ /* особый класс для шрифта новогодних носков */
+    font-family: "novogonie-noski";
+    font-size: 60px;
+    font-weight: bold;
+}
+/*********************************************/
+#main-action{ /* оформление окна основных действий */
+    /* оформление фона и картинки */
+    height: 630px; 
+    background-image: url(pics/Christmas-Gift-Boxes-Decorations-1920x1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* расположение его элементов */
+    display: flex;
+    flex-direction: row;
+}
+.quastion{ /* общий класс для элементов викторины */
+    /* офрмление отсутпов и рамки */
+    border-bottom: 5px solid seagreen;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+
+    /* размер шрифта */
+    font-size: 40px;
+}
+#quastions-block{/* общий блок викторины */
+    /* указание задневого фона и размерности */
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+}
+button{ /* кнопка выбора ответа */
+    border-radius: 50px; /* скругление краёв */
+   font-size: 1em;/*  размер шрифта*/
+
+   /* отступы */
+   margin: 10px;
+   padding: 10px;
+}
+/***************************************************/
+#main-zal{ /* установление высоты для картинки зала */
+    height: 550px;
+}
+.items{ /* абсолютное позиционирование для всех элементов зала */
+    position: absolute;
+}
+#yolka{ /* оформление расположения ёлки */
+    height: 400px;
+    top: 140px;
+    right:  10px;
+}
+#stol{/* оформление расположения стола */
+    width: 260px;
+    top: 290px;
+    right: 295px;
+    z-index: 2;
+}/* оформление расположения друзей */
+#friends{
+    top: 195px;
+    right: 475px;
+    height: 180px;
+    z-index: 1;
+}
+#gifts{/* оформление расположения подарков */
+    top: 450px;
+    right:  40px;
+    height: 100px;
+    z-index: 3;
+}
+#girliandi{/* оформление расположения гирлянды */
+    top: 0px;
+    right: 0;
+    width: 875px;
+}
+/* *************************************/
+#sound-bar{ /* оформление окна проигрывания музыки*/
+    background-color: rgba(255, 255, 255, 0.8);
+
+    width: 840px;
+    height: 50px;
+
+    border-radius: 50px;
+
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+} 
+#sound-bar p{ /* оформление текста проигрывания музыки*/
+    font-size: larger;
+
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+audio{ /* оформление плеера проигрывания музыки*/
+    width: 83%;
+    border-radius: 50px;
+}
+/************************************/
+#snow-window { /* оформление окна снегопада*/
+    /* первоначальное скрытие*/
+    display: none;
+
+/* размерность и позиционирование */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* анимация снегопада из картиног снега*/
+    background-image: url('snow/snow.png'), url('snow/snow3.png'), url('snow/snow2.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+}
+/* адаптация под браузеры */
+@keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-color:#b4cfe0;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#6b92b9;}
+}
+
+@-ms-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
